@@ -47,11 +47,12 @@ a:hover {
 
 p {
 	font-size: 1.25rem;
+	margin: 0 0 1em;
 }
 
 .container {
 	max-width: 1450px;
-	padding: 0 20px;
+	padding: 0 30px;
 	margin: 0 auto;
 }
 
@@ -78,6 +79,10 @@ p {
 #banner {
 	background-color: #eee;
 	padding: 80px 0;
+}
+
+#banner h1 {
+	text-align: center;
 }
 
 #top_page {
@@ -120,6 +125,9 @@ p {
 	text-align: center;
 }
 
+#footer p {
+	font-size: 1.125rem;
+}
 
 
 
@@ -128,9 +136,22 @@ p {
 }
 
 @media (max-width: 1023px) {
-  
+  .container {
+  	padding: 0 20px;
+  }
+
+  .three_column_list {
+  	display: block;
+  }
+
+  .three_column_list > div {
+  	width: 100%;
+  }
+
 }
 
 @media (max-width: 767px) {
-  
+  h1 {
+  	font-size: ;
+  }
 }
