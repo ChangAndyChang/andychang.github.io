@@ -1,3 +1,9 @@
-main {
+body {
+  background-color: #FFF;
+  width: 100%;
+  max-width: 2500px;
+}
+
+#example {
   background-color: #000;
 }
