@@ -1,9 +1,26 @@
 body {
+  padding: 0;
+  margin: 0;
   background-color: #FFF;
   width: 100%;
   max-width: 2500px;
 }
 
+header {
+  background-color: #326E53;
+}
+
+.container {
+  max-width: 1450px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
 #example {
   background-color: #000;
+}
+
+footer {
+  background-color: #000;
+  color: #FFF;
 }
