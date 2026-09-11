@@ -96,6 +96,35 @@ li {
 	align-items: center;
 }
 
+.header_left {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.header_left ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.header_left li {
+	margin: 0;
+	padding: 0;
+}
+
+.header_left li + li {
+	margin-left: 8px;
+}
+
+.header_left a {
+	text-decoration: none;
+	color: #FFF;
+}
+
 .header_right {
 	display: flex;
 	justify-content: space-between;
@@ -184,17 +213,22 @@ li {
 	list-style-type: none;
 }
 
+#banner li {
+	padding: 0 0 1em;
+}
+
 #content {
 	background-color: #FFF;
 }
 
 #content .container {
-	margin-top: 2em;
-	margin-bottom: 2em;
+	padding-top: 2em;
+	padding-bottom: 2em;
 }
 
 #top_page {
-	background-color: red;
+	background-color: #172713;
+	color: #FFF;
 }
 
 .three_column_list {
@@ -207,7 +241,40 @@ li {
 	margin: 0 0 1em;
 }
 
+.three_column_list h3 {
+	min-height: 3em;
+	display: flex;
+	align-items: center;
+}
 
+.three_column_list p {
+	text-align: center;
+}
+
+#it_toggle {
+	pointer-events: none;
+	color: #4a4a4a;
+	text-decoration: none;
+}
+
+#it_toggle:hover {
+	text-decoration: none;
+	color: #4a4a4a;
+}
+
+#it_toggle::before {
+	content: 'Information Technology ';
+}
+
+#it_toggle.clicked::before {
+	content: 'I.T. ';
+}
+
+
+
+.dropdown_menu {
+	display: none;
+}
 
 
 
@@ -235,6 +302,10 @@ li {
 
 #footer p {
 	font-size: 1.125rem;
+}
+
+#footer p:last-child {
+	margin: 0;
 }
 
 #footer a, #footer a:visited {
