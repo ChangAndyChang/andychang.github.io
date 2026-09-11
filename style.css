@@ -102,6 +102,17 @@ li {
 	justify-content: space-between;
 }
 
+.logo {
+
+	margin-right: 1%;
+}
+
+.logo img {
+	display: block;
+	width: 100%;
+	max-width: 275px;
+}
+
 .header_left ul {
 	list-style-type: none;
 	margin: 0;
@@ -200,8 +211,32 @@ li {
 }
 
 #banner {
+	position: relative;
+	overflow: hidden;
 	background-color: #eee;
 	padding: 80px 0;
+}
+
+#banner::before {
+	content: '';
+	background-color: blue;
+	height: 250px;
+	width: 250px;
+	position: absolute;
+	top: -50px;
+	right: -50px;
+}
+
+#banner::after {
+	content: '';
+	background-color: red;
+	height: 200px;
+	width: 200px;
+	border-radius: 50%;
+	position: absolute;
+	bottom: -50px;
+	left: -50px;
+
 }
 
 #banner h1 {
@@ -237,14 +272,37 @@ li {
 }
 
 .three_column_list > div {
+	border: 1px solid #000;
+	border-radius: 2em;
+	overflow: hidden;
 	width: calc(33.33% - 1em);
 	margin: 0 0 1em;
+}
+
+.three_column_list > div:nth-child(3n-2) h3 {
+	background-color: #000;
+}
+
+.three_column_list > div:nth-child(3n-1) h3 {
+	background-color: #FFF;
+}
+
+.three_column_list > div:nth-child(3n) h3 {
+	background-color: #000;
 }
 
 .three_column_list h3 {
 	min-height: 3em;
 	display: flex;
 	align-items: center;
+	margin: 0;
+	padding: 5px 20px;
+}
+
+#content .three_column_list ul {
+	list-style-type: none;
+	padding: 30px 8px;
+	background-color: #FFF;
 }
 
 .three_column_list p {
