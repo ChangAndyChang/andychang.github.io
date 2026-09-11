@@ -106,9 +106,9 @@ li {
 .logo {
 	display: inline-block;
 	font-family: Arial;
-	font-size: 2rem;
+	font-size: 1.5rem;
 	font-weight: 700;
-	line-height: 0.8em;
+	line-height: 1em;
 	padding: 10px 20px;
 	margin-right: 8px;
 }
@@ -182,11 +182,11 @@ li {
 	left: 0;
 }
 
-#header_list > li > a:hover {
+#header_list > li > a:hover, #header_list .has_dropdown.active > a, #header_list .has_dropdown.focused > a {
 	background-color: #480c0c;
 }
 
-#header_list > li:nth-child(3n-2) a:hover::after {
+#header_list > li:nth-child(3n-2) a:hover::after, #header_list .has_dropdown.active > a::after, #header_list .has_dropdown.focused > a::after {
 	background-color: #c48da6;
 }
 
@@ -221,6 +221,14 @@ li {
 	overflow: hidden;
 	background-color: #f5f5b8;
 	padding: 45px 0;
+}
+
+#banner h1 {
+	font-family: "Times New Roman";
+}
+
+#banner h1 span {
+	font-style: italic;
 }
 
 #banner::before {
@@ -307,22 +315,27 @@ li {
 	margin: 0;
 }
 
-.content_module_one {
+.skillset {
 	background-color: #F9EEFF;
 }
 
 .three_column_list {
 	display: flex;
-	justify-content: space-between;
+	flex-wrap: wrap;
 }
 
 .three_column_list > div {
+	box-sizing: border-box;
 	border: 1px solid #000;
 	border-radius: 2em;
 	overflow: hidden;
 	background-color: #FFF;
 	width: calc(33.33% - 1em);
-	margin: 0 0 1em;
+	margin: 0 1.5em 1em 0;
+}
+
+.three_column_list > div:nth-child(3n) {
+	margin-right: 0;
 }
 
 .three_column_list > div:nth-child(3n-2) h3 {
@@ -349,6 +362,7 @@ li {
 #content .three_column_list ul {
 	list-style-type: none;
 	padding: 30px 20px;
+	margin: 0;
 }
 
 #content .three_column_list ul li:last-child {
@@ -359,23 +373,43 @@ li {
 	text-align: center;
 }
 
-#it_toggle {
+#it_toggle a {
 	pointer-events: none;
 	color: #000;
 	text-decoration: none;
 }
 
-#it_toggle:hover {
+#it_toggle a:hover {
 	text-decoration: none;
 	color: #4a4a4a;
 }
 
-#it_toggle::before {
+#it_toggle a::before {
 	content: 'Information Technology ';
 }
 
-#it_toggle.clicked::before {
+#it_toggle.toggled_shorthand a::before {
 	content: 'I.T. ';
+}
+
+.education {
+	background-color: #eee;
+}
+
+#mtsac_toggle::before {
+	content: "Mt. San Antonio College";
+}
+
+#mtsac_toggle.toggled_shorthand::before {
+	content: 'Mt. SAC';
+}
+
+#cpp_toggle::before {
+	content: 'California State Polytechnic University, Pomona';
+}
+
+#cpp_toggle.toggled_shorthand::before {
+	content: 'Cal Poly Pomona';
 }
 
 .content_module_three {
@@ -394,9 +428,6 @@ li {
 	background-color: #740909;
 	min-width: 250px;
 	width: 100%;
-}
-
-.dropdown_menu {
 	list-style-type: none;
 }
 
@@ -413,14 +444,9 @@ li {
 	color: #FFF;
 }
 
-.has_dropdown:hover > .dropdown_menu, .has_dropdown:focused > .dropdown_menu {
+.has_dropdown:hover > .dropdown_menu, .has_dropdown.focused > .dropdown_menu {
 	display: block;
 }
-
-.has_dropdown.active > .dropdown_menu {
-	display: block;
-}
-
 
 
 .content_module_two {
