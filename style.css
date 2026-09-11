@@ -7,7 +7,6 @@ body {
 	font-family: Georgia, Times New Roman, Arial;
 	font-size: 1.125em;
 	line-height: 1.5em;
-	max-width: 2500px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -149,7 +148,6 @@ li {
 	align-items: center;
 	margin: 0;
 	width: 100%;
-	max-width: 800px;
 }
 
 #header_list {
@@ -162,17 +160,17 @@ li {
 	text-align: center;
 }
 
-#header_list a {
+#header_list > li > a {
 	position: relative;
 	z-index: 0;
 	display: block;
-	padding: 20px 8px;
+	padding: 20px 12px;
 	background-color: transparent;
 	color: #FFF;
 	text-decoration: none;
 }
 
-#header_list a::after {
+#header_list > li > a::after {
 	content: '';
 	background-color: transparent;
 	padding-bottom: 4px;
@@ -184,28 +182,28 @@ li {
 	left: 0;
 }
 
-#header_list a:hover {
-	background-color: rgba(104, 25, 22, 0.6);
+#header_list > li > a:hover {
+	background-color: #480c0c;
 }
 
-#header_list li:nth-child(3n-2) a:hover::after {
-	background-color: #b5ffc2;
+#header_list > li:nth-child(3n-2) a:hover::after {
+	background-color: #c48da6;
 }
 
-#header_list li:nth-child(3n-1) a:hover::after {
-	background-color: #96bfe6;
+#header_list > li:nth-child(3n-1) a:hover::after {
+	background-color: #d99e73;
 }
 
-#header_list li:nth-child(3n) a:hover::after {
-	background-color: #754260;
+#header_list > li:nth-child(3n) a:hover::after {
+	background-color: #FFF;
 }
 
 #back_main {
 	display: block;
   padding: 7px 13px;
   text-align: center;
-  background-color: #bcd382;
-  border: 1px solid #bcd382;
+  background-color: #FFF;
+  border: 1px solid #FFF;
   border-radius: 8px;
   white-space: nowrap;
   color: #000;
@@ -214,49 +212,68 @@ li {
 
 #back_main:hover {
 	color: #FFF;
-	background-color: #681916;
+	background-color: transparent;
 }
 
 #banner {
 	position: relative;
 	z-index: 0;
 	overflow: hidden;
-	background-color: #eee;
-	padding: 80px 0;
+	background-color: #f5f5b8;
+	padding: 45px 0;
 }
 
 #banner::before {
 	content: '';
-	background-color: #96bfe6;
-	height: 250px;
-	width: 250px;
+	background-color: #c48da6;
+	height: 150px;
+	width: 150px;
 	position: absolute;
 	z-index: -1;
-	top: -50px;
-	right: -50px;
+	top: 0;
+	left: 0;
 }
 
 #banner::after {
 	content: '';
-	background-color: #7cccad;
-	height: 200px;
-	width: 200px;
-	border-radius: 50%;
+	/*background-color: #d99e73;*/
+	height: 0;
+	width: 0;
+	border-left: 75px solid transparent;
+  border-right: 75px solid transparent;
+  border-bottom: 150px solid #d99e73;
 	position: absolute;
 	z-index: -1;
-	bottom: -50px;
-	left: -50px;
+	bottom: 0;
+	right: 0;
+}
+
+.banner_upper {
+	display: flex;
+	align-items: center;
+}
+
+.banner_upper::before {
+	content: '';
+	flex: 0 0 auto;
+	display: inline-block;
+	background: url("./assets/images/FB Profile Pic.jpg") center / cover no-repeat;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	margin-right: 20px;
 }
 
 #banner h1 {
 	text-transform: capitalize;
-	text-align: center;
+	margin: 0;
 }
 
 #banner ul {
 	margin: 40px 0 0;
 	list-style-type: none;
 	color: #000;
+	padding: 0 0 0 75px;
 }
 
 #banner li {
@@ -285,6 +302,10 @@ li {
 	color: #FFF;
 }
 
+#top_page p:last-child {
+	margin: 0;
+}
+
 .content_module_one {
 	background-color: #F9EEFF;
 }
@@ -304,7 +325,7 @@ li {
 }
 
 .three_column_list > div:nth-child(3n-2) h3 {
-	background-color: #b08699;
+	background-color: #c48da6;
 }
 
 .three_column_list > div:nth-child(3n-1) h3 {
@@ -361,10 +382,34 @@ li {
 	color: #FFF;
 }
 
+.has_dropdown {
+	position: relative;
+}
+
 .dropdown_menu {
 	display: none;
 	position: absolute;
+	z-index: 10;
+	background-color: #740909;
 	min-width: 250px;
+	width: 100%;
+}
+
+.dropdown_menu {
+	list-style-type: none;
+}
+
+.dropdown_menu a {
+	display: block;
+	text-align: left;
+	color: #FFF;
+	text-decoration: none;
+	padding: 10px 12px;
+}
+
+.dropdown_menu a:hover {
+	background-color: #480c0c;
+	color: #FFF;
 }
 
 .has_dropdown:hover > .dropdown_menu, .has_dropdown:focused > .dropdown_menu {
@@ -418,6 +463,18 @@ li {
 @media (max-width: 1023px) {
   .container {
   	padding: 0 20px;
+  }
+
+  .banner_upper {
+  	display: block;
+  }
+
+  .banner_upper::before {
+  	margin: 0 0 20px;
+  }
+
+  #banner ul {
+  	padding: 0;
   }
 
   .header_left {
