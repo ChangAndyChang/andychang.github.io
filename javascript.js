@@ -1,14 +1,21 @@
-
 $( document ).ready(function() {
 	// Handler for .ready() called.
-	$( "#it_toggle" ).on("click", function() {
-		$(this).toggleClass("clicked");
+	
+	$( ".toggle_shorthand" ).on("click", function() {
+		$(this).toggleClass("toggled_shorthand");
 	});
 
-	$('.has_dropdown').hover(function() {
-	    $(this).toggleClass('active');
+	$('.dropdown_trigger').hover(function() {
+	    $(this).parent().toggleClass('active');
 	});
 
+	$('.dropdown_menu').hover(function() {
+	    $(this).parent().toggleClass('active');
+	});
+
+	$('.dropdown_trigger').on("click", function() { 
+	    $(this).parent().toggleClass('focused' );
+	});
 
 
 });
