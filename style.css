@@ -94,7 +94,7 @@ li {
 #header .container {
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
+	align-items: stretch;
 }
 
 .header_left {
@@ -106,11 +106,16 @@ li {
 
 .logo {
 	display: inline-block;
+	font-family: "Brush Script MT", Arial;
+	font-size: 2rem;
+	font-weight: 700;
+	line-height: 0.8em;
+	padding: 10px 20px;
 	margin-right: 8px;
 }
 
 .logo img {
-	display: block;
+	display: none;
 	width: 100%;
 	max-width: 275px;
 }
@@ -280,6 +285,10 @@ li {
 	color: #FFF;
 }
 
+.content_module_one {
+	background-color: #a6e6db;
+}
+
 .three_column_list {
 	display: flex;
 	justify-content: space-between;
@@ -289,6 +298,7 @@ li {
 	border: 1px solid #000;
 	border-radius: 2em;
 	overflow: hidden;
+	background-color: #FFF;
 	width: calc(33.33% - 1em);
 	margin: 0 0 1em;
 }
@@ -307,17 +317,16 @@ li {
 
 .three_column_list h3 {
 	color: #FFF;
-	min-height: 3em;
+	min-height: 2.5em;
 	display: flex;
 	align-items: center;
 	margin: 0;
-	padding: 5px 20px;
+	padding: 20px 30px;
 }
 
 #content .three_column_list ul {
 	list-style-type: none;
-	padding: 30px 8px;
-	background-color: #FFF;
+	padding: 30px 20px;
 }
 
 #content .three_column_list ul li:last-child {
@@ -347,7 +356,10 @@ li {
 	content: 'I.T. ';
 }
 
-
+.content_module_three {
+	background-color: #172713;
+	color: #FFF;
+}
 
 .dropdown_menu {
 	display: none;
@@ -362,7 +374,7 @@ li {
 
 
 .content_module_two {
-	background-color: #a6e6db;
+	background-color: #FFF;
 }
 
 .favicon_explanation::after {
