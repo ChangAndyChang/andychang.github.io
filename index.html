@@ -3,20 +3,36 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png">
     <link rel="apple-touch-icon" href="./assets/images/apple-touch-icon.png">
+    <script type="text/javascript" src="./jquery-4.0.0.min.js"></script>
+    <script type="text/javascript" src="./javascript.js"></script>
+
     <link rel="stylesheet" href="../andychang.github.io/style.css">
     <link rel="icon" type="image/x-icon" href="../andychang.github.io/assets/images/favicon.png">
     <link rel="apple-touch-icon" href="../andychang.github.io/assets/images/apple-touch-icon.png">
+    <script type="text/javascript" src="../andychang.github.io/jquery-4.0.0.min.js"></script>
     <script type="text/javascript" src="../andychang.github.io/javascript.js"></script>
   </head>
   <body>
     <header id="header">
       <a id="ADA_content_skip" href="#content">Skip to Main Content</a>
       <div class="container">
-        <a class="logo" href="/"><img src="" alt="Example Logo"></a>
+        <div class="header_left">
+          <a class="logo" href="/"><img src="" alt="Example Logo"></a>
+          <ul>
+            <li><a class="social_link" href="https://www.linkedin.com/in/andy-chang-6a0363195/">Linkedin</a></li>
+            <li><a class="social_link" href="https://github.com/ChangAndyChang/">Github</a></li>
+            <li><a class="social_link" href="mailto:changandychang@gmail.com">Email</a></li>
+          </ul>
+        </div>
         <div class="header_right">
           <ul id="header_list">
             <li>
-              <a class="has_dropdown" href="javascript:void(0)">Test List Item 1</a>
+              <a class="has_dropdown" href="javascript:void(0)">Test List Item 1 With Dropdown Menu</a>
+              <ul class="dropdown_menu">
+                <li><a href="javascript:void(0);">Example dropdown item 1</a></li>
+                <li><a href="javascript:void(0);">Example dropdown item 2</a></li>
+                <li><a href="javascript:void(0);">Example dropdown item 3</a></li>
+              </ul>
             </li>
             <li>
               <a href="javascript:void(0)">Test List Item 2</a>
@@ -42,7 +58,7 @@
       </div>
     </div>
 	<div id="content">
-		<div class="top_page">
+		<div id="top_page">
 			<div class="container">
 				<h2>Considerations:</h2>
 				<p>Consider that you could be hiring me.</p>
@@ -51,15 +67,37 @@
 		</div>
 		<div class="content_module_one">
 			<div class="container">
+        <div>Skillsets/Job Titles:</div>
 				<div class="three_column_list">
           <div>
-            <p>Template List Item 1. Maybe filling these later.</p>
+            <h3>Software Developer</h3>
+            <ul>
+              <li>HTML, CSS, Javascript, JQuery</li>
+              <li>C, C++, C#, Cx86</li>
+              <li>Java, C#</li>
+              <li></li>
+            </ul>
           </div>
           <div>
-            <p>Template List Item 2.</p>
+            <h3><a id="it_toggle" href="">Specialist</a></h3>
+            <ul>
+              <li>Systems Support with </li>
+              <li>AWS</li>
+              <li>Putty</li>
+              <li></li>
+              <li>255.255.255.0 Other skillsets.</li>
+            </ul>
           </div>
           <div>
-            <p>Template List Item 3.</p>
+            <h3>Computer Engineer</h3>
+            <ul>
+              <li>Microprocessors</li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li>Android Studio, Kotlin, </li>
+            </ul>
           </div>
         </div>
 			</div>
