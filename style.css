@@ -11,6 +11,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
+	color: #000;
 	font-weight: 700;
 	line-height: 1.05em;
 	margin: 0 0 24px;
@@ -100,11 +101,12 @@ li {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	padding: 0 2% 0 0;
 }
 
 .logo {
-
-	margin-right: 1%;
+	display: inline-block;
+	margin-right: 8px;
 }
 
 .logo img {
@@ -212,6 +214,7 @@ li {
 
 #banner {
 	position: relative;
+	z-index: 0;
 	overflow: hidden;
 	background-color: #eee;
 	padding: 80px 0;
@@ -219,24 +222,25 @@ li {
 
 #banner::before {
 	content: '';
-	background-color: blue;
+	background-color: #a6e6db;
 	height: 250px;
 	width: 250px;
 	position: absolute;
+	z-index: -1;
 	top: -50px;
 	right: -50px;
 }
 
 #banner::after {
 	content: '';
-	background-color: red;
+	background-color: #681916;
 	height: 200px;
 	width: 200px;
 	border-radius: 50%;
 	position: absolute;
+	z-index: -1;
 	bottom: -50px;
 	left: -50px;
-
 }
 
 #banner h1 {
@@ -245,11 +249,17 @@ li {
 }
 
 #banner ul {
+	margin: 40px 0 0;
 	list-style-type: none;
+	color: #000;
 }
 
 #banner li {
 	padding: 0 0 1em;
+}
+
+#banner li:last-child {
+	padding: 0;
 }
 
 #content {
@@ -263,6 +273,10 @@ li {
 
 #top_page {
 	background-color: #172713;
+	color: #FFF;
+}
+
+#top_page h2 {
 	color: #FFF;
 }
 
@@ -280,18 +294,19 @@ li {
 }
 
 .three_column_list > div:nth-child(3n-2) h3 {
-	background-color: #000;
+	background-color: #681916;
 }
 
 .three_column_list > div:nth-child(3n-1) h3 {
-	background-color: #FFF;
+	background-color: #a6e6db;
 }
 
 .three_column_list > div:nth-child(3n) h3 {
-	background-color: #000;
+	background-color: #172713;
 }
 
 .three_column_list h3 {
+	color: #FFF;
 	min-height: 3em;
 	display: flex;
 	align-items: center;
@@ -305,13 +320,17 @@ li {
 	background-color: #FFF;
 }
 
+#content .three_column_list ul li:last-child {
+	padding: 0;
+}
+
 .three_column_list p {
 	text-align: center;
 }
 
 #it_toggle {
 	pointer-events: none;
-	color: #4a4a4a;
+	color: #000;
 	text-decoration: none;
 }
 
@@ -332,13 +351,19 @@ li {
 
 .dropdown_menu {
 	display: none;
+	position: absolute;
+	min-width: 250px;
+}
+
+.has_dropdown.active > .dropdown_menu {
+	display: block;
 }
 
 
 
-
-
-
+.content_module_two {
+	background-color: #a6e6db;
+}
 
 .favicon_explanation::after {
 	content: url(../andychang.github.io/assets/images/apple-touch-icon.png);
@@ -377,6 +402,10 @@ li {
 @media (max-width: 1023px) {
   .container {
   	padding: 0 20px;
+  }
+
+  .header_left {
+  	padding: 0;
   }
 
   .three_column_list {
