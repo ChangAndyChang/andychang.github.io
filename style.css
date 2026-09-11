@@ -60,14 +60,23 @@ p {
   background-color: #326E53;
 }
 
+.header_right {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 0 0 auto;
+	width: 100%;
+	max-width: 500px;
+}
+
 #header_list {
 	list-style-type: none;
-	margin: 0 0 0 auto;
+	margin: 0 10px 0 0;
 	padding: 0;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	max-width: 500px;
+	text-align: center;
 }
 
 #header_list a {
@@ -108,11 +117,11 @@ p {
 
 
 .favicon_explanation::after {
-	content: '../andychang.github.io/assets/images/apple-touch-icon.png';
+	content: url(../andychang.github.io/assets/images/apple-touch-icon.png);
 	display: block;
 	width: 100%;
 	max-width: 180px;
-	margin: 0 0 1em;
+	margin: 1em 0;
 }
 
 #footer {
@@ -129,7 +138,9 @@ p {
 	font-size: 1.125rem;
 }
 
-
+#footer a, #footer a:visited {
+	color: #6a5eff;
+}
 
 @media (max-width: 1279px) {
   
