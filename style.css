@@ -68,7 +68,7 @@ li {
 
 #content ul li {
 	margin: 0;
-	padding: 0 0 1em;
+	padding: 0 0 0.8em;
 }
 
 .container {
@@ -158,6 +158,7 @@ li {
 	align-items: center;
 	justify-content: space-between;
 	text-align: center;
+	text-transform: capitalize;
 }
 
 #header_list > li > a {
@@ -315,7 +316,7 @@ li {
 	margin: 0;
 }
 
-.skillset {
+#skillset {
 	background-color: #F9EEFF;
 }
 
@@ -483,14 +484,18 @@ li {
 	color: #6a5eff;
 }
 
-@media (max-width: 1279px) {
+@media screen and (max-width: 1279px) {
   
 }
 
-@media (max-width: 1023px) {
+@media screen and (max-width: 1023px) {
   .container {
   	padding: 0 20px;
   }
+
+	#header_list {
+		display: none;
+	}
 
   .banner_upper {
   	display: block;
@@ -518,7 +523,9 @@ li {
 
 }
 
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
+	
+
   h1 {
   	font-size: ;
   }
