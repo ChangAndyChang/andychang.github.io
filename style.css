@@ -35,6 +35,7 @@ h4, h5, h6 {
 a {
 	text-decoration: none;
 	color: #6a5eff;
+	font-weight: 700;
 }
 
 a:visited {
@@ -62,13 +63,13 @@ li {
 }
 
 #content ul {
-	padding: 0;
+	padding: 0 0 0 1em;
 	margin: 0 0 1em;
 }
 
 #content ul li {
 	margin: 0;
-	padding: 0 0 0.8em;
+	padding: 0 0 0.6em;
 }
 
 .container {
