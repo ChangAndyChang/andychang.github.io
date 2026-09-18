@@ -394,7 +394,7 @@ li {
 	content: 'I.T. ';
 }
 
-.education {
+#education {
 	background-color: #eee;
 }
 
@@ -414,7 +414,7 @@ li {
 	content: 'Cal Poly Pomona';
 }
 
-.content_module_three {
+#content_module_three {
 	background-color: #740909;
 	color: #FFF;
 }
@@ -438,6 +438,7 @@ li {
 	text-align: left;
 	color: #FFF;
 	text-decoration: none;
+	transition: ;
 	padding: 10px 12px;
 }
 
@@ -451,7 +452,7 @@ li {
 }
 
 
-.content_module_two {
+#content_module_two {
 	background-color: #FFF;
 }
 
@@ -469,8 +470,13 @@ li {
 	color: #FFF;
 }
 
+#footer .container {
+	display: flex;
+
+}
+
 #footer div {
-	text-align: center;
+	display: block;
 }
 
 #footer p {
